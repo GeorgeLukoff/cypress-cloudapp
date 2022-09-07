@@ -1,7 +1,3 @@
-// import { login } from "../support/page-objects"
-// import { signup } from "../support/page-objects"
-// import { settings } from "../support/page-objects"
-
 export const pageObject = {
     globalSelectors: {
         emailInput: 'input[type="email"]',
