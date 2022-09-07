@@ -2,7 +2,7 @@
 // import { signup } from "../support/page-objects"
 // import { settings } from "../support/page-objects"
 
-export const pageObjet = {
+export const pageObject = {
     globalSelectors: {
         emailInput: 'input[type="email"]',
         passwordInput: 'input[type="password"]',
