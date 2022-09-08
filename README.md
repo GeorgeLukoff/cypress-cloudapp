@@ -1,11 +1,13 @@
-# cypress-cloudapp
+Development Requirements
+This project makes use of Node, JavaScript and NPM.
 
-install cypress: https://www.youtube.com/watch?v=09KbTRLrgWA
+Getting started
+The following should be run from the root of this project directory, i.e. automation/ from the command line.
 
-Other helpfull links:
-https://docs.cypress.io/guides/continuous-integration/introduction#What-you-ll-learn
-https://docs.cypress.io/guides/getting-started/opening-the-app#What-you-ll-learn
-https://docs.cypress.io/guides/references/configuration#Configuration-File
-https://docs.cypress.io/guides/core-concepts/introduction-to-cypress#What-you-ll-learn
-https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#What-you-ll-learn
-
+Install Node via NVM, see install Node Version Manager
+Run npm install
+If node-gyp complains about Xcode, you might need to re-install Xcode
+see uninstall Xcode in Xcode faq
+then run xcode-select --install
+Run node_modules/cypress/bin/cypress install
+Your environment should now be ready to run Cypress
