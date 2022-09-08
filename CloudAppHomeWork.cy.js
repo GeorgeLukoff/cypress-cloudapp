@@ -1,25 +1,35 @@
 import { userLogin } from "../support/page-objects/user-login"
 import { userSignup } from "../support/page-objects/user-signup"
 import { userSettingUpdate } from "../support/page-objects/user-settings"
-import { pageObjet as po } from "../support/page-objects/page-object"
-import { cloudAppUser } from "../fixtures/secrets"
-
+import { verifyAvatar } from "../support/page-objects/user-avatar"
 
 
 describe('Home Work', () => {
 
-  const user = cloudAppUser
-  
-  it("A User signs up for a Cloud App account", () => {
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test when it encounters 'grecaptcha' pop up
+    return false
+  });
+
+
+  let user
+
+  beforeEach(function () {
+    cy.fixture('secrets').then((data) => {
+      user = data
+    })
+  })
+
+
+  it('A User signs up for a Cloud App account', () => {
 
     userSignup(user.username, user.password)
 
   })
 
-  
-  it('A User updates it avatar', () => {
 
-    const fileName = 'hamster.jpeg'
+  it('A User logs in and updates it avatar', () => {
 
     userLogin(user.username, user.password)
 
@@ -27,4 +37,3 @@ describe('Home Work', () => {
 
   })
 })
-
